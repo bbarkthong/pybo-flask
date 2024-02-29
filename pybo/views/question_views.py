@@ -50,3 +50,9 @@ def modify(question_id):
     else:  # GET 요청
         form = QuestionForm(obj=question)
     return render_template('question/question_form.html', form=form)
+
+
+@bp.route('/delete/<int:question_id>', methods=('GET', 'POST'))
+@login_required
+def delete(question_id):
+    pass
